@@ -43,7 +43,6 @@ public class BookController {
     }
 
     // 19번: 도서 단건 조회 (GET /api/public/books/{id})
-    // (명세서엔 PATCH라고 오타가 있을 수 있으나 조회는 보통 GET입니다. 일단 GET으로 작성)
     @GetMapping("/public/books/{id}")
     public Map<String, Object> getBook(@PathVariable Long id) {
         Object book = bookRepository.findById(id)
@@ -58,7 +57,6 @@ public class BookController {
     }
 
     // 2. 도서 목록 조회 (검색 + 페이징 + 정렬)
-    // 사용법: /api/books?page=0&size=10&sort=price,desc&keyword=자바
     @GetMapping("/books")
     public Map<String, Object> getAllBooks(
             @RequestParam(defaultValue = "0") int page,

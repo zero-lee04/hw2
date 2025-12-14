@@ -15,6 +15,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("서점 프로젝트 API")
                         .description("API 명세서입니다.")
-                        .version("1.0.0")); // 🚨 이 부분이 없다면 에러가 납니다!
+                        .version("1.0.0"));
     }
 }
